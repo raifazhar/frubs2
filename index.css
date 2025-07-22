@@ -1,0 +1,133 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Plus Jakarta Sans";
+}
+
+.grid-wrapper {
+  padding: 0 1.5rem;
+  margin-top: 6rem;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 4px;
+}
+.item-swatch {
+  gap: 1rem;
+  margin-top: 1.6rem;
+  margin-left: 0.3rem;
+}
+.item-swatch .i-color {
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.i-color.active {
+  outline-width: 0.1rem;
+  outline-color: #000;
+  outline-offset: 2px;
+  outline-style: solid;
+}
+.product-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.9px;
+  word-break: break-word;
+}
+.product-container {
+  max-width: 100%;
+}
+.product-container .image-container > img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-container .card-information {
+  padding: 1rem 0;
+}
+.color-name-container {
+  margin-top: 0.7rem;
+}
+.color-name {
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: capitalize;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  color: rgba(18, 18, 18, 0.75);
+}
+
+.ratting-container {
+  margin-top: 0.4rem;
+}
+.ratting-container .rating-star {
+  line-height: 1;
+  font-size: 1.4rem;
+  letter-spacing: 0.7rem;
+}
+.ratting-container .rating-star:before {
+  content: "\2605\2605\2605\2605\2605";
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #e6711c calc((4 / 5 + 0.5 * 1.4 / (5 * (0.7 + 1.4))) * 100%),
+    rgba(18, 18, 18, 0.15) calc((4 / 5 + 0.5 * 1.4 / (5 * (0.7 + 1.4))) * 100%)
+  );
+}
+
+.ratting-container .caption {
+  font-size: 1rem;
+  letter-spacing: 0.07rem;
+  line-height: 1.7;
+  color: rgb(18, 18, 18);
+}
+.price {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 21px;
+  color: #525252 !important;
+  letter-spacing: 0.7px;
+  font-weight: 700;
+}
+
+.image-container:hover .primary {
+  display: none;
+}
+.image-container:hover .secondary {
+  display: block;
+}
+
+.quick-view {
+  left: 1rem;
+  top: 1rem;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 2rem;
+  padding: 9px;
+  align-items: center;
+  border: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .grid-wrapper {
+    padding: 0 5rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 8px;
+  }
+  .product-container .card-information {
+    padding: 1rem 0;
+  }
+  .quick-view {
+    left: 1.6rem;
+    top: 1.8rem;
+  }
+}

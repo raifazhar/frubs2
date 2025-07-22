@@ -184,3 +184,9 @@ img {
 .color-white {
   color: #ffffff;
 }
+
+.d-grid {
+  display: grid;
+}
+
+

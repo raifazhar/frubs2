@@ -1,0 +1,41 @@
+<div class="item-label">
+    <div data-img-id="files-purplerain_scrub_suit_for_female-jpg" varprice="Rs.5,499" varcompareprice="Rs.5,499"
+        data-variant-price="5499" data-variant-compare-price="5499" data-id="41535936233565" color="ozoneblue"
+        data-url="/products/harmony-long-length-women-scrub-set?variant=41535936233565"
+        url="/collections/shop-women/products/harmony-long-length-women-scrub-set?variant=41535936233565"
+        class="bg-carbon-black item-image-wrapper ozoneblue carbonblack    same-price "
+        data-filter=".filter-carbonblack" data-value="carbonblack" data-val-2="
+    Carbon Black
+    " title="
+    Carbon Black
+    " data-img="//www.frubs.com/cdn/shop/files/Purplerain_scrub_suit_for_female.jpg?v=1750676331"
+        style="background-color: carbonblack;">
+
+    </div>
+</div>
+
+
+.rating-star:before {
+content: '\2605\2605\2605\2605\2605';
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.rating-star:before {
+content: "\2605\2605\2605\2605\2605";
+background: linear-gradient(90deg, var(--color-icon) var(--percent), rgba(var(--color-foreground), .15) var(--percent));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+
+<button type="submit" name="add" class="quick-view" aria-haspopup="dialog">
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15" fill="none">
+        <path
+            d="M11.8875 7.62967C11.8875 9.12917 10.672 10.3447 9.17249 10.3447C7.67309 10.3447 6.45752 9.12917 6.45752 7.62967C6.45752 6.13018 7.67309 4.91467 9.17249 4.91467C10.672 4.91467 11.8875 6.13018 11.8875 7.62967Z"
+            stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path
+            d="M9.17282 1.29468C5.12054 1.29468 1.69033 3.95798 0.537109 7.62968C1.69031 11.3014 5.12054 13.9647 9.17282 13.9647C13.225 13.9647 16.6553 11.3014 17.8085 7.62968C16.6553 3.95801 13.225 1.29468 9.17282 1.29468Z"
+            stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+</button>
