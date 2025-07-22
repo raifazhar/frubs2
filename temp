@@ -46,3 +46,96 @@
         </button>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-container">
+    <div class="product-wrapper d-flex flex-column relative">
+        <div class="card-content relative">
+            <a href="">
+                <div class="image-container">
+                    <img src="https://www.frubs.com/cdn/shop/files/Purplerain_scrub_suit_for_female.jpg?v=1750676331"
+                        alt="product-primary" class="primary">
+                    <img src="https://www.frubs.com/cdn/shop/files/Carbonblack_v_neck_scrub_top_for_women.jpg?v=1750676363"
+                        alt="product-secondary" class="secondary absolute">
+                </div>
+                <div class="sizeSwatchContainer absolute hidden">
+                    <ul class="sizeSwatch list-none d-flex justify-center align-center">
+                        <li class="variant-swatch carbonblack  carbonblack ">
+                            <span class="var_Item">S</span>
+                        </li>
+                        <li class="variant-swatch carbonblack  carbonblack ">
+                            <span class="var_Item">D</span>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+
+        <div class="card-information">
+            <h2 class="product-name">
+                <a href="">Harmony Long Length Scrub Set</a>
+            </h2>
+            <div class="item-swatch d-flex align-center">
+                <div class="i-color" style="background-color: #000"></div>
+                <div class="i-color" style="background-color: #b02727"></div>
+                <div class="i-color" style="background-color: #2f1199"></div>
+                <div class="i-color" style="background-color: #dfd225"></div>
+                <div class="i-color" style="background-color: #2f1199"></div>
+                <div class="i-color" style="background-color: #dfd225"></div>
+            </div>
+            <div class="color-name-container">
+                <span class="color-name">Carbon Black</span>
+            </div>
+            <div class="ratting-container d-flex">
+
+                <span aria-hidden="true" class=" rating-star color-icon-text"
+                    style="--rating: 4; --rating-max: 5 ; --rating-decimal: 0.5;"></span>
+                <span class="caption" aria-hidden="true">(11)</span>
+            </div>
+            <h3 class="price">Rs.5,499</h3>
+        </div>
+        <button type="submit" name="add" class="quick-view absolute" aria-haspopup="dialog">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15" fill="none">
+                <path
+                    d="M11.8875 7.62967C11.8875 9.12917 10.672 10.3447 9.17249 10.3447C7.67309 10.3447 6.45752 9.12917 6.45752 7.62967C6.45752 6.13018 7.67309 4.91467 9.17249 4.91467C10.672 4.91467 11.8875 6.13018 11.8875 7.62967Z"
+                    stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                    d="M9.17282 1.29468C5.12054 1.29468 1.69033 3.95798 0.537109 7.62968C1.69031 11.3014 5.12054 13.9647 9.17282 13.9647C13.225 13.9647 16.6553 11.3014 17.8085 7.62968C16.6553 3.95801 13.225 1.29468 9.17282 1.29468Z"
+                    stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+const item_swatch = document.createElement("div")
+product.color.forEach(color => {
+div = document.createElement("div")
+div.className = "i-color"
+div.style.backgroundcolor = color.color_code
+item_swatch.appendChild("")
+})
