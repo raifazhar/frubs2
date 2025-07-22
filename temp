@@ -1,18 +1,20 @@
 <div class="product-container">
     <div class="product-wrapper d-flex flex-column relative">
         <div class="card-content relative">
-            <div class="image-container">
-                <img src="" alt="product-primary" class="primary">
-                <img src="" alt="product-secondary" class="secondary absolute">
-            </div>
-            <div class="sizeSwatchContainer absolute ">
-                <ul class="sizeSwatch list-none d-flex justify-center align-center">
-                    <li class="variant-swatch carbonblack  carbonblack ">
-                        <span class="var_Item">S</span>
+            <a href="">
+                <div class="image-container">
+                    <img src="" alt="product-primary" class="primary">
+                    <img src="" alt="product-secondary" class="secondary absolute">
+                </div>
+                <div class="sizeSwatchContainer absolute ">
+                    <ul class="sizeSwatch list-none d-flex justify-center align-center">
+                        <li class="variant-swatch carbonblack  carbonblack ">
+                            <span class="var_Item">S</span>
 
-                    </li>
-                </ul>
-            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
         </div>
 
         <div class="card-information">

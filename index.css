@@ -98,7 +98,6 @@ body {
   font-weight: 700;
 }
 
-
 .card-content .secondary {
   top: 0;
   left: 0;
@@ -132,6 +131,9 @@ body {
   width: 100%;
   bottom: 5rem;
   opacity: 0;
+}
+.sizeSwatch {
+  gap: 1rem;
 }
 .sizeSwatch .variant-swatch {
   width: 17%;
@@ -167,5 +169,8 @@ body {
   .quick-view {
     left: 1.6rem;
     top: 1.8rem;
+  }
+  .card-content .sizeSwatchContainer {
+    display: block;
   }
 }
