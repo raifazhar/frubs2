@@ -72,17 +72,7 @@
 
         const grid = document.querySelector(".product-grid")
         productsdata.forEach(product => {
-            const item_swatch = document.createElement("div")
-            item_swatch.className = "item-swatch d-flex align-center"
-            product.color.forEach(color => {
-                div = document.createElement("div")
-                div.className = "i-color"
-                div.setAttribute("color", `${color.name}`);
-                div.style.backgroundColor = color.color_code;
 
-                console.log(div)
-                item_swatch.appendChild(div)
-            })
             product.color.forEach(color => {
                 const div = document.createElement("div");
                 div.className = "product-container";
@@ -133,24 +123,46 @@
                 div.querySelector(".product-name a").textContent = product.title
                 div.querySelector(".price").textContent = product.price
                 div.querySelector(".caption").textContent = `(${product.reviewcount})`
-                div.querySelector(".color-name").textContent = color.name
-                div.querySelector(".primary").src = color.img[0]
-                div.querySelector(".secondary").src = color.img[1]
+                const color_name = div.querySelector(".color-name")
+                const primary = div.querySelector(".primary")
+                const secondary = div.querySelector(".secondary")
+                color_name.textContent = color.name
+                primary.src = color.img[0]
+                secondary.src = color.img[1]
+
                 const sizeSwatch = div.querySelector(".sizeSwatch")
                 color.size.forEach(size => {
-                    li = document.createElement("li")
+                    const li = document.createElement("li")
                     li.className = "variant-swatch"
-                    span = document.createElement("span")
+                    const span = document.createElement("span")
                     span.className = "var_Item"
                     span.textContent = size
                     li.appendChild(span)
                     sizeSwatch.appendChild(li)
                 })
-                console.log(item_swatch, color.name)
-                div.querySelector(".item_swatch_wrapper").appendChild(item_swatch.cloneNode(true))
 
+                const item_swatch = document.createElement("div")
+                item_swatch.className = "item-swatch d-flex align-center"
+                product.color.forEach(color => {
+                    const swatch = document.createElement("div")
+                    swatch.className = "i-color"
+                    swatch.setAttribute("color", `${color.name}`);
+                    swatch.style.backgroundColor = color.color_code;
+                    swatch.addEventListener("click", () => {
+                        primary.src = color.img[0];
+                        secondary.src = color.img[1];
+                        color_name.textContent = color.name;
+                        div.querySelectorAll(".i-color").forEach(el => el.classList.remove("active"));
+                        swatch.classList.add("active");
+                    })
+                    console.log("added listener to", color.name);
+                    item_swatch.appendChild(swatch)
+                })
+
+                div.querySelector(".item_swatch_wrapper").appendChild(item_swatch)
                 const active_button = div.querySelector(`[color="${color.name}"]`)
                 active_button.classList.add("active")
+
 
 
 
