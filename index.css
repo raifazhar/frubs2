@@ -47,7 +47,7 @@ body {
 .product-container .image-container > img {
   border-radius: 10px;
   overflow: hidden;
-  transition: ease-in-out 0.5s;
+  transition: ease 0.4s;
 }
 .product-container .card-information {
   padding: 1rem 0;
@@ -98,10 +98,12 @@ body {
   font-weight: 700;
 }
 
+
 .card-content .secondary {
   top: 0;
   left: 0;
   opacity: 0;
+  transform: scale(0.98);
 }
 
 .card-content:hover .primary {
@@ -112,6 +114,7 @@ body {
 }
 .card-content:hover .secondary {
   opacity: 1;
+  transform: scale(1);
 }
 
 .quick-view {
@@ -129,7 +132,6 @@ body {
   width: 100%;
   bottom: 5rem;
   opacity: 0;
-  transition: ease-in-out 0.5s;
 }
 .sizeSwatch .variant-swatch {
   width: 17%;
