@@ -58,9 +58,11 @@
                 div.setAttribute("color", `${color.name}`);
                 div.style.backgroundColor = color.color_code;
                 div.addEventListener("click", () => {
-                    div.closest(".color-name").textContent = color.name
-                    div.closest(".primary").textContent = color.img[0]
-                    div.closest(".secondary").textContent = color.img[1]
+
+                    productcontainer = div.closest(".product-container")
+                    productcontainer.querySelector(".color-name").textContent = color.name
+                    productcontainer.querySelector(".primary").src = color.img[0]
+                    productcontainer.querySelector(".secondary").src = color.img[1]
                 })
 
                 item_swatch.appendChild(div)
@@ -129,7 +131,7 @@
                     sizeSwatch.appendChild(li)
                 })
                 console.log(item_swatch, color.name)
-                div.querySelector(".item_swatch_wrapper").appendChild(item_swatch.cloneNode(true))
+                div.querySelector(".item_swatch_wrapper").appendChild(item_swatch.cloneNode())
 
                 const active_button = div.querySelector(`[color="${color.name}"]`)
                 active_button.classList.add("active")

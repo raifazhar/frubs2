@@ -24,7 +24,7 @@
         [
             {
                 title: "Harmony Long Length Scrub Set",
-                price: "Rs.5,499",
+                price: "5,499",
                 reviewcount: "11",
                 color: [
                     {
@@ -72,9 +72,10 @@
     document.addEventListener("DOMContentLoaded", () => {
 
         const grid = document.querySelector(".product-grid")
+        console.log(grid, "grid")
         productsdata.forEach(product => {
 
-            
+
             product.color.forEach(color => {
                 const div = document.createElement("div");
                 div.className = "product-container";
@@ -125,7 +126,7 @@
                             </div>
                         `
                 div.querySelector(".product-name a").textContent = product.title
-                div.querySelector(".price").textContent = product.price
+                div.querySelector(".price").textContent = `Rs.${product.price}`
                 div.querySelector(".caption").textContent = `(${product.reviewcount})`
                 const color_name = div.querySelector(".color-name")
                 const primary = div.querySelector(".primary")
@@ -135,9 +136,9 @@
                 secondary.src = color.img[1]
 
                 const sizeSwatch = div.querySelector(".sizeSwatch")
-                color.size.forEach(size => {
-                    sizeSwatch.appendChild(updatesize(size))
-                })
+
+                updatesize(color.size, sizeSwatch)
+
 
                 const item_swatch = document.createElement("div")
                 item_swatch.className = "item-swatch d-flex align-center"
@@ -153,10 +154,7 @@
                         div.querySelectorAll(".i-color").forEach(el => el.classList.remove("active"));
                         swatch.classList.add("active");
                         sizeSwatch.innerHTML = ""
-                        color.size.forEach(size => {
-
-                            sizeSwatch.appendChild(updatesize(size))
-                        })
+                        updatesize(color.size, sizeSwatch)
                     })
                     console.log("added listener to", color.name);
 
@@ -166,26 +164,25 @@
                 })
 
                 div.querySelector(".item_swatch_wrapper").appendChild(item_swatch)
-                const active_button = div.querySelector(`[color="${color.name}"]`)
+                const active_button = item_swatch.querySelector(`[color="${color.name}"]`)
                 active_button.classList.add("active")
-
-
-
-
                 grid.appendChild(div)
             })
         })
     });
 
-    function updatesize(size) {
+    function updatesize(colorsize, sizeSwatch) {
 
-        const li = document.createElement("li")
-        li.className = "variant-swatch"
-        const span = document.createElement("span")
-        span.className = "var_Item"
-        span.textContent = size
-        li.appendChild(span)
-        return li
+        colorsize.forEach(size => {
+            const li = document.createElement("li")
+            li.className = "variant-swatch"
+            const span = document.createElement("span")
+            span.className = "var_Item"
+            span.textContent = size
+            li.appendChild(span)
+            sizeSwatch.appendChild(li)
+        })
+
     }
 </script>
 
