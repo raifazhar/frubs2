@@ -1,141 +1,143 @@
-<div class="product-container">
-    <div class="product-wrapper d-flex flex-column relative">
-        <div class="card-content relative">
-            <a href="">
-                <div class="image-container">
-                    <img src="" alt="product-primary" class="primary">
-                    <img src="" alt="product-secondary" class="secondary absolute">
-                </div>
-                <div class="sizeSwatchContainer absolute ">
-                    <ul class="sizeSwatch list-none d-flex justify-center align-center">
-                        <li class="variant-swatch carbonblack  carbonblack ">
-                            <span class="var_Item">S</span>
+<script>
+    productsdata =
+        [
+            {
+                title: "Harmony Long Length Scrub Set",
+                price: "Rs.5,499",
+                reviewcount: "11",
+                color: [
+                    {
+                        name: "carbon black",
+                        color_code: "#000",
+                        img: ["https://www.frubs.com/cdn/shop/files/Purplerain_scrub_suit_for_female.jpg?v=1750676331", "https://www.frubs.com/cdn/shop/files/Carbonblack_v_neck_scrub_top_for_women.jpg?v=1750676363"],
+                        size: ["S", "M"]
+                    },
+                    {
+                        name: "ozone blue",
+                        color_code: "#2C3C80",
+                        img: ["https://www.frubs.com/cdn/shop/files/Ozoneblue_doctor_scrub_suits_for_women.jpg?v=1750676520", "https://www.frubs.com/cdn/shop/files/Ozoneblue_scrub_suits_for_women.jpg?v=1750676543"],
+                        size: ["S", "M"]
+                    },
+                    {
+                        name: "Aqua Marine",
+                        color_code: "#15717e",
+                        img: ["https://www.frubs.com/cdn/shop/files/Aquamarine_scrub_sets_for_women.jpg?v=1751966491", "https://www.frubs.com/cdn/shop/files/Aquamarine_women_scrub_sets_with_pockets.jpg?v=1750674659"],
+                        size: []
+                    },
+                    {
+                        name: "Leatherback Grey",
+                        color_code: "#6b757f ",
+                        img: ["https://www.frubs.com/cdn/shop/files/Leatherbackgrey_scrub_set_for_women.jpg?v=1750674851", "https://www.frubs.com/cdn/shop/files/Leatherbackgrey_female_scrub_suit.jpg?v=1750674892"],
+                        size: ["S", "L"]
+                    },
+                    {
+                        name: "Purple Rain",
+                        color_code: "#483145",
+                        img: ["https://www.frubs.com/cdn/shop/files/Purplerain_female_doctor_scrubs.jpg?v=1750676080", "https://www.frubs.com/cdn/shop/files/Purplerain_female_doctors_scrubs_suit.jpg?v=1750676108"],
+                        size: []
+                    },
+                    {
+                        name: "Heather Seeds",
+                        color_code: "#784d78",
+                        img: ["https://www.frubs.com/cdn/shop/files/heatherseeds_doctor_scrub_suits.jpg?v=1750676628", "https://www.frubs.com/cdn/shop/files/Heatherseeds_scrub_suits_for_female_with_pockets.jpg?v=1750676677"],
+                        size: ["L"]
+                    },
+                ]
 
-                        </li>
-                    </ul>
-                </div>
-            </a>
-        </div>
+            },
 
-        <div class="card-information">
-            <h2 class="product-name">
-                <a href=""></a>
-            </h2>
-            <div class="item-swatch d-flex align-center">
-            </div>
-            <div class="color-name-container">
-                <span class="color-name"></span>
-            </div>
-            <div class="ratting-container d-flex">
+        ]
+    document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.querySelector(".product-grid")
+        productsdata.forEach(product => {
+            const item_swatch = document.createElement("div")
+            item_swatch.className = "item-swatch d-flex align-center"
+            product.color.forEach(color => {
+                div = document.createElement("div")
+                div.className = "i-color"
+                div.setAttribute("color", `${color.name}`);
+                div.style.backgroundColor = color.color_code;
+                div.addEventListener("click", () => {
+                    div.closest(".color-name").textContent = color.name
+                    div.closest(".primary").textContent = color.img[0]
+                    div.closest(".secondary").textContent = color.img[1]
+                })
 
-                <span aria-hidden="true" class=" rating-star color-icon-text"
-                    style="--rating: 4; --rating-max: 5 ; --rating-decimal: 0.5;"></span>
-                <span class="caption" aria-hidden="true"></span>
-            </div>
-            <h3 class="price"></h3>
-        </div>
-        <button type="submit" name="add" class="quick-view absolute" aria-haspopup="dialog">
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15" fill="none">
-                <path
-                    d="M11.8875 7.62967C11.8875 9.12917 10.672 10.3447 9.17249 10.3447C7.67309 10.3447 6.45752 9.12917 6.45752 7.62967C6.45752 6.13018 7.67309 4.91467 9.17249 4.91467C10.672 4.91467 11.8875 6.13018 11.8875 7.62967Z"
-                    stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                    d="M9.17282 1.29468C5.12054 1.29468 1.69033 3.95798 0.537109 7.62968C1.69031 11.3014 5.12054 13.9647 9.17282 13.9647C13.225 13.9647 16.6553 11.3014 17.8085 7.62968C16.6553 3.95801 13.225 1.29468 9.17282 1.29468Z"
-                    stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </button>
-    </div>
-</div>
+                item_swatch.appendChild(div)
+            })
+            product.color.forEach(color => {
+                const div = document.createElement("div");
+                div.className = "product-container";
+                div.innerHTML = `
+                            <div class="product-wrapper d-flex flex-column relative">
+                                <div class="card-content relative">
+                                    <a href="">
+                                        <div class="image-container">
+                                            <img src="" alt="product-primary" class="primary">
+                                            <img src="" alt="product-secondary" class="secondary absolute">
+                                        </div>
+                                        <div class="sizeSwatchContainer absolute ">
+                                            <ul class="sizeSwatch list-none d-flex justify-center align-center">
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
 
+                                <div class="card-information">
+                                    <h2 class="product-name">
+                                        <a href=""></a>
+                                    </h2>
+                                    <div class="item_swatch_wrapper">
+                                    </div>
+                                    <div class="color-name-container">
+                                        <span class="color-name"></span>
+                                    </div>
+                                    <div class="ratting-container d-flex">
 
+                                        <span aria-hidden="true" class=" rating-star color-icon-text"
+                                            style="--rating: 4; --rating-max: 5 ; --rating-decimal: 0.5;"></span>
+                                        <span class="caption" aria-hidden="true"></span>
+                                    </div>
+                                    <h3 class="price"></h3>
+                                </div>
+                                <button type="submit" name="add" class="quick-view absolute" aria-haspopup="dialog">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15" fill="none">
+                                        <path
+                                            d="M11.8875 7.62967C11.8875 9.12917 10.672 10.3447 9.17249 10.3447C7.67309 10.3447 6.45752 9.12917 6.45752 7.62967C6.45752 6.13018 7.67309 4.91467 9.17249 4.91467C10.672 4.91467 11.8875 6.13018 11.8875 7.62967Z"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M9.17282 1.29468C5.12054 1.29468 1.69033 3.95798 0.537109 7.62968C1.69031 11.3014 5.12054 13.9647 9.17282 13.9647C13.225 13.9647 16.6553 11.3014 17.8085 7.62968C16.6553 3.95801 13.225 1.29468 9.17282 1.29468Z"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        `
+                div.querySelector(".product-name a").textContent = product.title
+                div.querySelector(".price").textContent = product.price
+                div.querySelector(".caption").textContent = `(${product.reviewcount})`
+                div.querySelector(".color-name").textContent = color.name
+                div.querySelector(".primary").src = color.img[0]
+                div.querySelector(".secondary").src = color.img[1]
+                const sizeSwatch = div.querySelector(".sizeSwatch")
+                color.size.forEach(size => {
+                    li = document.createElement("li")
+                    li.className = "variant-swatch"
+                    span = document.createElement("span")
+                    span.className = "var_Item"
+                    span.textContent = size
+                    li.appendChild(span)
+                    sizeSwatch.appendChild(li)
+                })
+                console.log(item_swatch, color.name)
+                div.querySelector(".item_swatch_wrapper").appendChild(item_swatch.cloneNode(true))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="product-container">
-    <div class="product-wrapper d-flex flex-column relative">
-        <div class="card-content relative">
-            <a href="">
-                <div class="image-container">
-                    <img src="https://www.frubs.com/cdn/shop/files/Purplerain_scrub_suit_for_female.jpg?v=1750676331"
-                        alt="product-primary" class="primary">
-                    <img src="https://www.frubs.com/cdn/shop/files/Carbonblack_v_neck_scrub_top_for_women.jpg?v=1750676363"
-                        alt="product-secondary" class="secondary absolute">
-                </div>
-                <div class="sizeSwatchContainer absolute hidden">
-                    <ul class="sizeSwatch list-none d-flex justify-center align-center">
-                        <li class="variant-swatch carbonblack  carbonblack ">
-                            <span class="var_Item">S</span>
-                        </li>
-                        <li class="variant-swatch carbonblack  carbonblack ">
-                            <span class="var_Item">D</span>
-                        </li>
-                    </ul>
-                </div>
-            </a>
-        </div>
-
-        <div class="card-information">
-            <h2 class="product-name">
-                <a href="">Harmony Long Length Scrub Set</a>
-            </h2>
-            <div class="item-swatch d-flex align-center">
-                <div class="i-color" style="background-color: #000"></div>
-                <div class="i-color" style="background-color: #b02727"></div>
-                <div class="i-color" style="background-color: #2f1199"></div>
-                <div class="i-color" style="background-color: #dfd225"></div>
-                <div class="i-color" style="background-color: #2f1199"></div>
-                <div class="i-color" style="background-color: #dfd225"></div>
-            </div>
-            <div class="color-name-container">
-                <span class="color-name">Carbon Black</span>
-            </div>
-            <div class="ratting-container d-flex">
-
-                <span aria-hidden="true" class=" rating-star color-icon-text"
-                    style="--rating: 4; --rating-max: 5 ; --rating-decimal: 0.5;"></span>
-                <span class="caption" aria-hidden="true">(11)</span>
-            </div>
-            <h3 class="price">Rs.5,499</h3>
-        </div>
-        <button type="submit" name="add" class="quick-view absolute" aria-haspopup="dialog">
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15" fill="none">
-                <path
-                    d="M11.8875 7.62967C11.8875 9.12917 10.672 10.3447 9.17249 10.3447C7.67309 10.3447 6.45752 9.12917 6.45752 7.62967C6.45752 6.13018 7.67309 4.91467 9.17249 4.91467C10.672 4.91467 11.8875 6.13018 11.8875 7.62967Z"
-                    stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path
-                    d="M9.17282 1.29468C5.12054 1.29468 1.69033 3.95798 0.537109 7.62968C1.69031 11.3014 5.12054 13.9647 9.17282 13.9647C13.225 13.9647 16.6553 11.3014 17.8085 7.62968C16.6553 3.95801 13.225 1.29468 9.17282 1.29468Z"
-                    stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </button>
-    </div>
-</div>
+                const active_button = div.querySelector(`[color="${color.name}"]`)
+                active_button.classList.add("active")
 
 
 
-const item_swatch = document.createElement("div")
-product.color.forEach(color => {
-div = document.createElement("div")
-div.className = "i-color"
-div.style.backgroundcolor = color.color_code
-item_swatch.appendChild("")
-})
+                grid.appendChild(div)
+            })
+        })
+    });
+</script>
