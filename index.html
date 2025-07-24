@@ -12,9 +12,296 @@
 </head>
 
 <body>
-    <div class="grid-wrapper">
-        <div class="product-grid">
+    <div class="px-1_5 announcement_container">
+        <div class="announcement width-max">
+            <p class="text-center">
+                Flat $19.99 global shipping on orders upto amount $90
+            </p>
+        </div>
+    </div>
+    <header id="stickyHeader" class="header d-flex justify-between align-center width-max relative">
+        <div class="logo-container">
+            <a href="/">
+                <img src="https://www.frubs.com/cdn/shop/files/log.png?v=1724240618&width=300" alt="">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu-container list-none d-flex align-center ">
+                <li class="">
+                    <details class="menu">
+                        <summary class="menu-summary item-list">
+                            <a href="/">
+                                <span>
+                                    Women
+                                </span>
+                            </a>
+                        </summary>
+                    </details>
+                </li>
 
+                <li class="menu-parent">
+                    <details class="menu">
+                        <summary class="menu-summary item-list">
+                            <a href="/">
+                                <span>
+                                    Men
+                                </span>
+                            </a>
+                        </summary>
+                        <div class="menu-popup">
+                        </div>
+                    </details>
+                </li>
+
+                <li class="menu-parent item-list">
+                    <a href="/pages/contact-us"
+                        class="header__menu-item list-menu__item link link--text focus-inset parent-link">
+                        <span>Bulk Order</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="icons-container i-flex justify-end align-center">
+            <div class="details-container ">
+                <details>
+                    <summary class="" aria-haspopup="dialog" aria-label="Search" role="button">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"
+                                fill="none">
+                                <g clip-path="url(#clip0_442_1161)">
+                                    <g clip-path="url(#clip1_442_1161)">
+                                        <path
+                                            d="M7.51992 0.399902C11.4411 0.399902 14.6199 3.57868 14.6199 7.4999C14.6199 9.18043 14.0361 10.7246 13.0601 11.9406L12.9463 12.0778L18.5118 17.6991C18.745 17.9346 18.7431 18.3144 18.5076 18.5476C18.2983 18.7548 17.9749 18.7764 17.7418 18.6132L17.6591 18.5434L12.0975 12.9274C10.8615 13.9709 9.26419 14.5999 7.51992 14.5999C3.5987 14.5999 0.419922 11.4211 0.419922 7.4999C0.419922 3.57868 3.5987 0.399902 7.51992 0.399902ZM7.51992 1.5999C4.26144 1.5999 1.61992 4.24142 1.61992 7.4999C1.61992 10.7584 4.26144 13.3999 7.51992 13.3999C10.7784 13.3999 13.4199 10.7584 13.4199 7.4999C13.4199 4.24142 10.7784 1.5999 7.51992 1.5999Z"
+                                            fill="black"></path>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_442_1161">
+                                        <rect width="19" height="19" fill="white" transform="translate(0.0195312)">
+                                        </rect>
+                                    </clipPath>
+                                    <clipPath id="clip1_442_1161">
+                                        <rect width="19" height="19" fill="white" transform="translate(0.0195312)">
+                                        </rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <svg class="hidden" aria-hidden="true" focusable="false">
+                                <use href="#icon-close">
+                                </use>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="d-flex absolute justify-center align-center search-popup width-max search-bar"
+                        role="dialog" aria-modal="true" aria-label="Search">
+                        <div class="width-max search-form-container" tabindex="-1">
+                            <div class="search-modal__form" data-loading-text="Loading...">
+                                <form role="search" class="search-form">
+                                    <div class="field relative">
+                                        <input class="search__input field__input" id="Search-In-Modal" type="search"
+                                            name="q" placeholder="" aria-expanded="false"
+                                            aria-owns="predictive-search-results"
+                                            aria-controls="predictive-search-results" aria-haspopup="listbox"
+                                            aria-autocomplete="list" autocorrect="off" autocomplete="off"
+                                            autocapitalize="off" spellcheck="false">
+
+                                        <label class="field__label floating-label" for="floating-label">Search</label>
+                                        <span class="searchIcons">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M7.38977 13.03C10.6372 13.03 13.2698 10.3975 13.2698 7.15002C13.2698 3.90259 10.6372 1.27002 7.38977 1.27002C4.14233 1.27002 1.50977 3.90259 1.50977 7.15002C1.50977 10.3975 4.14233 13.03 7.38977 13.03Z"
+                                                    stroke="black" stroke-width="1.5"></path>
+                                                <path d="M11.79 11.6401L15.15 15.1001" stroke="black"
+                                                    stroke-width="1.5">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </details>
+            </div>
+            <div class="account-icon header__icon">
+                <a href="/account/login" class="header__icon header__icon--account link focus-inset small-hide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 23 22" fill="none">
+                        <path
+                            d="M11.283 0C14.4297 0 16.9806 2.55093 16.9806 5.69767C16.9806 7.70712 15.9404 9.47362 14.3691 10.488C18.3094 11.6692 21.0338 15.2636 22.5137 21.1667C22.6198 21.5899 22.2998 22 21.8635 22H0.669672C0.233022 22 -0.0870615 21.5892 0.0197048 21.1658C1.50986 15.2564 4.24367 11.6608 8.19189 10.4833C6.62307 9.46939 5.58531 7.70472 5.58531 5.69767C5.58531 2.55093 8.13624 0 11.283 0ZM11.2743 11.3953C6.63609 11.3953 3.44422 14.3032 1.65237 20.2841L1.5422 20.6591H20.9902L20.8824 20.2833C19.1382 14.4328 16.0501 11.5232 11.5747 11.3995L11.2743 11.3953ZM11.283 1.34063C8.87665 1.34063 6.92594 3.29134 6.92594 5.69767C6.92594 8.104 8.87665 10.0547 11.283 10.0547C13.6893 10.0547 15.64 8.104 15.64 5.69767C15.64 3.29134 13.6893 1.34063 11.283 1.34063Z"
+                            fill="black"></path>
+                    </svg>
+                    <span class="hidden">Log in</span>
+                </a>
+            </div>
+            <div class="relative cart header__icon">
+                <span class="header__icon " id="cart-icon-bubble">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                        <g clip-path="url(#clip0_442_1169)">
+                            <g clip-path="url(#clip1_442_1169)">
+                                <path
+                                    d="M9.22362 0.480225C12.1818 0.480225 14.063 2.34113 14.8115 5.89888L17.0199 5.89999C17.9036 5.89999 18.6199 6.61634 18.6199 7.49999V20.5C18.6199 21.3836 17.9036 22.1 17.0199 22.1H2.01992C1.13627 22.1 0.419922 21.3836 0.419922 20.5V7.49999C0.419922 6.61634 1.13627 5.89999 2.01992 5.89999L4.17049 5.89932C4.55041 2.35404 6.25633 0.480225 9.22362 0.480225ZM17.0199 7.09999H2.01992C1.79901 7.09999 1.61992 7.27908 1.61992 7.49999V20.5C1.61992 20.7209 1.79901 20.9 2.01992 20.9H17.0199C17.2408 20.9 17.4199 20.7209 17.4199 20.5V7.49999C17.4199 7.27908 17.2408 7.09999 17.0199 7.09999ZM9.22362 1.58022C6.91056 1.58022 5.61537 2.9556 5.27659 5.89884L13.6858 5.89838C13.0165 2.96931 11.5462 1.58022 9.22362 1.58022Z"
+                                    fill="black"></path>
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_442_1169">
+                                <rect width="21" height="22" fill="white" transform="translate(0.0195312 0.5)">
+                                </rect>
+                            </clipPath>
+                            <clipPath id="clip1_442_1169">
+                                <rect width="19" height="22" fill="white" transform="translate(0.0195312 0.5)">
+                                </rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="hidden">Cart</span>
+                    <div class="cart-count-bubble">
+                        <span aria-hidden="true" class="cart-counter">0</span>
+                        <span class="hidden">0
+                            items</span>
+                    </div>
+                </span>
+            </div>
+            <div class="details-container hamburger-menu">
+                <details>
+                    <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
+                        aria-label="Menu" role="button" aria-expanded="false" aria-controls="menu-drawer">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 23 17"
+                                fill="none">
+                                <path d="M0.264893 0.813721H22.1049M0.264893 8.09372H22.1049M0.264893 15.3737H22.1049"
+                                    stroke="black" stroke-width="1.56"></path>
+                            </svg>
+
+                            <span class="drawerclose-icon">
+                                <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M20 1.84176L18.1582 0L10 8.17121L1.84176 0L0 1.84176L8.17121 10L0 18.1582L1.84176 20L10 11.8288L18.1582 20L20 18.1582L11.8288 10L20 1.84176Z"
+                                        fill="none"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </summary>
+                </details>
+            </div>
+        </div>
+    </header>
+    <div class="mainpage">
+
+        <div class="upper-menu width-max text-center">
+            <h2>
+                Shop Women
+            </h2>
+            <div>
+                <ul class="d-flex justify-center list-none">
+                    <li>Women</li>
+                    <li>Men</li>
+                </ul>
+            </div>
+            <div class="d-flex justify-between bubble_item_container">
+                <div class="bubble_item swiper-slide for-women-tab swiper-slide-active" role="group" aria-label="1 / 6">
+                    <a href="/collections/scrub-sets-women" class="bubble-link"
+                        data-link="/collections/scrub-sets-women"><img
+                            src="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo-04_662bbc46-ca1f-4d73-bfb3-1a1a77a72cf2.png?v=1731670683&amp;width=100"
+                            srcset="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo-04_662bbc46-ca1f-4d73-bfb3-1a1a77a72cf2.png?v=1731670683&amp;width=100 100w"
+                            width="100" height="100">
+                    </a>
+                    <a href="/collections/scrub-sets-women" class="bubble-link">
+                        <p class="bubble_text">Scrub Sets</p>
+                    </a>
+
+                </div>
+                <div class="bubble_item swiper-slide for-women-tab swiper-slide-next" role="group" aria-label="2 / 6"><a
+                        href="/collections/scrub-top-women" class="bubble-link"
+                        data-link="/collections/scrub-top-women"><img
+                            src="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo_3.png?v=1731670706&amp;width=100"
+                            srcset="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo_3.png?v=1731670706&amp;width=100 100w"
+                            width="100" height="100">
+                    </a>
+                    <a href="/collections/scrub-top-women" class="bubble-link">
+                        <p class="bubble_text">Tops</p>
+                    </a>
+
+                </div>
+                <div class="bubble_item swiper-slide  
+                            " role="group" aria-label="5 / 6"><a href="/collections/unisex-trousers"
+                        class="bubble-link" data-link="/collections/unisex-trousers"><img
+                            src="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo_2.png?v=1731670683&amp;width=100"
+                            srcset="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo_2.png?v=1731670683&amp;width=100 100w"
+                            width="100" height="100">
+                    </a>
+                    <a href="/collections/unisex-trousers" class="bubble-link">
+                        <p class="bubble_text">Bottoms</p>
+                    </a>
+
+                </div>
+                <div class="bubble_item swiper-slide" role="group" aria-label="6 / 6"><a
+                        href="/collections/unisex-accessories" class="bubble-link"
+                        data-link="/collections/unisex-accessories"><img
+                            src="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo-05.png?v=1731670683&amp;width=100"
+                            srcset="//www.frubs.com/cdn/shop/files/Collection_Page_Categories_Logo-05.png?v=1731670683&amp;width=100 100w"
+                            width="100" height="100">
+                    </a>
+                    <a href="/collections/unisex-accessories" class="bubble-link">
+                        <p class="bubble_text">Accessories</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-wrapper">
+            <div class="grid-top d-flex width-max justify-between">
+                <div class="flex-grow align-center d-flex left-menus">
+                    <div>
+                        <details>
+                            <summary>
+                                Avalibility
+                            </summary>
+                            <div class="absolute">
+                                brother
+                            </div>
+                        </details>
+                    </div>
+                    <div>
+                        <details>
+                            <summary>
+                                Price
+                            </summary>
+                            <div class="absolute">
+                                brother
+                            </div>
+                        </details>
+                    </div>
+
+                </div>
+                <div>
+                    <details>
+                        <summary>
+                            Sort
+                        </summary>
+                        <div class="absolute">
+                            brother
+                        </div>
+                    </details>
+                </div>
+                <div class="d-flex right-menus">
+
+                    <div class="grid-changer d-flex ">
+                        <label class="grid-label">View</label>
+                        <span class="grid-2">2</span>
+                        <span class="grid-4">4</span>
+                    </div>
+                    <div class="grid-changer d-flex ">
+                        <span>9 total</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-grid">
+
+            </div>
         </div>
     </div>
 </body>
@@ -71,7 +358,29 @@
 
     document.addEventListener("DOMContentLoaded", () => {
 
-        const grid = document.querySelector(".product-grid")
+        const grid = document.querySelector(".product-grid");
+        const grid_changer = document.querySelector(".grid-changer");
+        const grid_2 = grid_changer.querySelector(".grid-2");
+        const grid_4 = grid_changer.querySelector(".grid-4");
+
+
+
+        grid_2.addEventListener("click", () => {
+            grid_4.classList.remove("active-view");
+            grid.classList.remove("active-grid-4");
+            grid_2.classList.add("active-view");
+            grid.classList.add("active-grid-2");
+            // grid.style.gridTemplateColumns = "repeat(2, minmax(0, 1fr))";
+        });
+
+        grid_4.addEventListener("click", () => {
+            grid_2.classList.remove("active-view");
+            grid_4.classList.add("active-view");
+            grid.classList.add("active-grid-4");
+            grid.classList.remove("active-grid-2");
+            // grid.style.gridTemplateColumns = "repeat(4, minmax(0, 1fr))";
+        });
+
         console.log(grid, "grid")
         productsdata.forEach(product => {
 
@@ -151,7 +460,7 @@
                         primary.src = color.img[0];
                         secondary.src = color.img[1];
                         color_name.textContent = color.name;
-                        div.querySelectorAll(".i-color").forEach(el => el.classList.remove("active"));
+                        item_swatch.querySelector(".i-color.active").classList.remove("active");
                         swatch.classList.add("active");
                         sizeSwatch.innerHTML = ""
                         updatesize(color.size, sizeSwatch)
@@ -165,6 +474,7 @@
 
                 div.querySelector(".item_swatch_wrapper").appendChild(item_swatch)
                 const active_button = item_swatch.querySelector(`[color="${color.name}"]`)
+
                 active_button.classList.add("active")
                 grid.appendChild(div)
             })
@@ -182,8 +492,59 @@
             li.appendChild(span)
             sizeSwatch.appendChild(li)
         })
-
     }
+</script>
+
+<script>
+    const announcement = document.querySelector(".announcement");
+    const header = document.getElementById("stickyHeader");
+    const allDetails = header.querySelectorAll('details');
+    let lastScroll = 0;
+    const announcementHeight = announcement.offsetHeight;
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 0) {
+            header.style.top = `${announcementHeight}px`;
+            header.classList.remove("scrolled");
+        } else if (currentScroll > lastScroll) {
+            header.style.top = "-100px";
+
+        } else {
+            header.style.top = "0";
+            header.classList.add("scrolled");
+        }
+
+        lastScroll = currentScroll;
+        allDetails.forEach(d => d.removeAttribute('open'));
+    });
+
+    document.querySelectorAll('.menu').forEach((detail) => {
+        detail.addEventListener('mouseenter', () => {
+            detail.setAttribute('open', true);
+        });
+
+        detail.addEventListener('mouseleave', () => {
+            detail.removeAttribute('open');
+        });
+
+    });
+
+
+</script>
+
+
+<script>
+    const menu = document.querySelectorAll(".footer-closable-menu")
+    menu.forEach(menu => {
+        const h2 = menu.querySelector("h2")
+        const ul = menu.querySelector("ul")
+        h2.addEventListener("click", () => {
+            ul.classList.toggle("active-content")
+        }
+        )
+    })
 </script>
 
 </html>
